@@ -1,0 +1,73 @@
+/* @override
+	http://ember.multimediabychris.com/css/style.css */
+
+@charset "UTF-8";
+/* @group Mobile */
+
+/*CSS is mobile first for foundation, then the desktop 768-min overides later */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Maven Pro';
+}
+
+section#comments {
+	background-color: white;
+	padding: 40px;
+	margin-bottom: 20px;
+}
+
+div#transcript {
+	padding: 20px 0 10px 0;
+}
+
+body {
+	background-color: #F6F6F6;
+}
+
+// bottom of home page
+
+.btn.pro-button {
+	font-family: 'Maven Pro';
+	color: #000;
+	font-weight: 400;
+	background-color: #F7B9A8;
+	text-decoration: none;
+}
+
+/* explore */
+
+section.explore-section {
+	background-color: white;
+	position: relative;
+}
+
+.tag-list li.media {
+	margin: 0;
+}
+.esplore li.media img, li.media p {
+	display: block;
+}
+.tag-list h4 {
+	margin: 0 !important;
+	text-transform: none;
+	text-decoration: underline;
+	color: #e55b3b;
+}
+
+.tag-list li.media div.media-body {
+	padding: 0 !important;
+	background-image: url(none);
+}
+/* homepage features videos */
+
+@media (min-width: 468px){}
+
+@media (min-width: 768px) {
+	.btn.btn-primary.btn-lg {
+		font-size:1.2em;
+	}
+	.stats {
+		text-align: right;
+		float: right;
+	}
+}

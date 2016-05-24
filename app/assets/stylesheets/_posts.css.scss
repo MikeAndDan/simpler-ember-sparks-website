@@ -19,16 +19,6 @@ li.media {
 	margin: 10px 30px;
 	padding: 10px;
 }
-
-.latest-post {
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: #eee;
-	margin-bottom: 10px;
-}
-.series-list li.media p {
-	display: block;
-}
  li.media p.playtime {
 	display: block;
 	visibility: visible;
@@ -55,45 +45,18 @@ li.media {
     padding-left: 15px;
   }
 
-  div.media-left {
-    margin: 0;
-		padding: 0;
-  }
   li.media img, li.media p {
     display: block;
   }
   li.media {
-    .corner-flag {
-			position: absolute;
-		}
     padding: 0;
 		padding: 20px;
     margin: 0;
-  }
-  li.pro-media {
-    .corner-flag{content: image_url('cornerflag_pro.png');}
-  }
-  li.pro-subscriber {
-    .corner-flag{content: image_url('cornerflag_pro-unlocked.png');}
-  }
-
-  .series-list li {
-    background: image_url('badge_fallback.png') 10px 10px no-repeat #5a96bb;
-    margin: 0 0 10px;
-    padding-left: 80px;
   }
 
   .tag-list li.media {
     padding-bottom: 11px;
     padding-top: 0;
-  }
-
-  h4.media-heading {
-    text-transform: uppercase;
-    text-align: left;
-    color: #F1603E;
-    font-size: 24px;
-    text-decoration: none;
   }
 
   ul.tag-list {

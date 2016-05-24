@@ -10,7 +10,7 @@ gem 'devise'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'stripe-rails'
 gem 'zapier_ruby'
+gem 'algoliasearch-rails'
 
 gem 'redcarpet'
 gem 'rouge'
@@ -37,6 +38,7 @@ gem 'andand'
 gem 'has_permalink'
 
 gem "letter_opener", :group => :development
+gem 'seed_dump', :group => :development
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

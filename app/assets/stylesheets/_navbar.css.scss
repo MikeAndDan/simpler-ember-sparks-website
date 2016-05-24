@@ -6,6 +6,7 @@ $nav-background: rgb(232, 74, 54);
 	border-style: none;
 	-moz-box-shadow: 0 0 2px #000000;
 	opacity: 1;
+	border-radius: 0;
 }
 .nav.navbar-nav li a {
 	color: #EEE;
@@ -19,18 +20,25 @@ $nav-background: rgb(232, 74, 54);
 }
 
 a.navbar-brand {
-	background: image_url('Logo.jpg') 0 center;
+	background: image_url('logo-high-res.png') 0 center;
 	width: 240px;
-	height: 47px;
+	background-size: 240px;
+	background-repeat: no-repeat;
 }
 
-.navbar-brand img {
-	margin: -15PX AUTO;
-}
 
 @media (min-width: 768px) {
   form.navbar-form.navbar-right {
     display: none;
+  }
+  .nav-cta {
+  	border: 1px white solid;
+  	padding-top: 5px !important;
+  	padding-bottom: 5px !important;
+  	margin-top: 10px;
+  	&:hover {
+  		background-color:#fff!important;
+  	}
   }
 }
 
@@ -40,6 +48,20 @@ a.navbar-brand {
 
 	li a:hover {
 		color: #000;
-		background-color: $nav-background;
+	}
+}
+
+.nav-search {
+	margin: 15px;
+	
+	input {
+		text-indent: 20px;
+	}
+	
+	i {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		color: #A8A8A8;
 	}
 }

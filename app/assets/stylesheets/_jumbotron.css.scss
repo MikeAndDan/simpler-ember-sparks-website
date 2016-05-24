@@ -1,6 +1,5 @@
 .jumbotron {
-	background: #f5f5f5 image_url('heropattern_free.jpg');
-  background-color: #F3A18A;
+  	background-color: rgb(232, 74, 54);
 	margin-top: 0;
 	margin-bottom: 10px;
 	padding-top: 16px;
@@ -12,28 +11,21 @@
 		z-index: 1;
 		position: relative;
 	}
+	h1 {
+		font-size: 25px;
+		color: #FFFFFF;
+		text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+		padding-bottom: 20px;
+	}
 	h2 {
 		font-size: 1.2em;
 	}
-}
-
-hr {
-	border-bottom-color: transparent;
-	border: 0 none transparent;
-	background-color: transparent;
 }
 
 a.previous-link, a.next-link {
 	color: black;
 	text-decoration: none;
 	text-align: center;
-}
-
-.jumbotron h1 {
-	color: #000000;
-	font-size: 25px;
-	font-weight: 400;
-	max-width: 700px;
 }
 
 .jumbotron h2.modified-headline {
@@ -50,17 +42,11 @@ a.previous-link, a.next-link {
 	line-height: 24px;
 }
 
-.jumbotron .tag-description {
-	font-family: 'Arial';
-	font-size: 15px;
-	font-weight: 200px;
-	line-height: 20px;
-}
-
 @media (min-width: 768px) {
   .jumbotron h1 {
-    font-size: 48px;
+    font-size: 38px;
   	margin: auto;
+  	margin-top: 20px;
   }
   .jumbotron h2.modified-headline {
   	display: block;
@@ -71,14 +57,14 @@ a.previous-link, a.next-link {
 	}
 	.jumbotron p {
     font-size: 15px;
-		width: 50%;
 		margin: auto;
 		display: block;
+
+    a {
+      color: #004;
+    }
 	}
 }
 
 @media (min-width: 1200px) {
-	.jumbotron p {
-		width: 30%;
-	}
 }

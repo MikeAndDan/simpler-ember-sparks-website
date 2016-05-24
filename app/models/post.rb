@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  include AlgoliaSearch
+  
   after_save { tags.map(&:updated_publish_date) }
   after_destroy { tags.map(&:updated_publish_date)}
 
@@ -16,6 +18,35 @@ class Post < ActiveRecord::Base
   def readable_time
     if seconds && seconds != 0
       "#{seconds/60}m#{seconds%60}s"
+    end
+  end
+  
+  def display_title
+    title.split('-')[1].try(:strip)
+  end
+  
+  algoliasearch per_environment: true do
+    attributesToIndex [:publish_date, :display_title, :title, :description, :transcript]
+    customRanking ["desc(publish_date)"]
+    
+    attribute :title, :display_title, :description, :transcript,
+      :publish_date, :links, :permalink,
+      :free, :difficulty, :seconds
+      
+    tags do
+      [free? ? 'free' : 'premium']
+    end
+    
+    attribute :thumbnail_image_url do
+      thumbnail_image.url
+    end
+
+    add_slave 'Post_by_publish_date_asc', per_environment: true do
+      customRanking ["asc(publish_date)"]
+    end
+
+    add_slave 'Post_by_publish_date_desc', per_environment: true do
+      customRanking ["desc(publish_date)"]
     end
   end
 end
